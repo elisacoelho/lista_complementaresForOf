@@ -6,13 +6,21 @@
     Pergunte ao usuário qual das cores da lista que ele gosta.
     Apresente as cores preferidas e a quantidade de cores que o usuário gosta.
     */
+    let cores = ["Branco", "Azul", "Marrom", "Cinza", "Verde", "Amarelo", "Vermelho", "Preto"];
 
-    //Entrada
+    const corPreferida = prompt(`Qual das cores da lista ${cores} você gosta?`).trim().toLocaleLowerCase();
 
+    let quantidadeCoresGostadas = 0;
 
-    //Processamento
+    for (const cor of cores) {
+        if (cor.toLowerCase() === corPreferida.toLowerCase()) {
+            quantidadeCoresGostadas++;
+        }
+    }
 
-
-    //Saída
+    if (quantidadeCoresGostadas > 0) {
+      alert(`Você gosta da cor ${corPreferida}.`);
+      alert(`Quantidade de cores que você gosta: ${quantidadeCoresGostadas}`);
+    } 
 
 </script>

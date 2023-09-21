@@ -5,12 +5,18 @@
     Apresente as quantidades no final do programa.
     */
 
-    //Entrada
+    const palavra = prompt("Digite uma palavra:").toLowerCase();
+    let vogais = 0;
+    let consoantes = 0;
 
+    for (const letra of palavra) {
+        if ('aeiou'.includes(letra)) {
+            vogais++;
+        } else if (letra >= 'a' && letra <= 'z') {
+            consoantes++;
+        }
+    }
 
-    //Processamento
-
-
-    //Saída
+    alert(`A quantidade de vogais: ${vogais} e a quantidade de consoantes: ${consoantes}`);
 
 </script>

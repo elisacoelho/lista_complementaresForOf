@@ -6,12 +6,33 @@
     Pergunte para o usuário qual das bebidas que possui álcool (leia bebida por bebida do Array) e apresente apenas as bebidas permitidas para menores de 18 anos, ou seja, que não possuem álcool.
     */
 
-    //Entrada
+    const idade = Number(prompt("Qual é a sua idade?"));
+    const bebidas = [];
+
+    for (const bebida of bebidas) {
+        const bebidaLowerCase = bebida.toLowerCase();
+
+        if (
+            bebida === "água" ||
+            bebida === "suco natural" ||
+            bebida === "refrigerante" &&
+            idade >= 18
+        ) {
+            bebidas.push(bebida);
+        }
+    }
 
 
-    //Processamento
+    if (bebidas.length === 0) {
+        alert("Você não pode consumir nenhuma das bebidas disponíveis.");
+    } else {
+        alert("Bebidas permitidas para você:");
+        for (const bebida of bebidas) {
+            alert(bebida);
+        }
+    }
 
 
-    //Saída
+
 
 </script>
